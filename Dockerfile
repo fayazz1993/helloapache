@@ -1,5 +1,5 @@
 FROM ubuntu
-RUN apt update -y
-RUN apt install apache2 -y
-RUN apt install mysql-server -y
+RUN apt-get update -y
+RUN apt-get install apache2 -y
 COPY * /var/www/html/
+CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
